@@ -1,0 +1,21 @@
+<div class="content-container">
+  <p>{{training?.description}}</p>
+  <p>Ihre Trainerin/Ihr Trainer: <b>{{training?.trainer?.name}}</b></p>
+  <p>Vom <b>{{training?.startDate | date}}</b> bis zum <b>{{training?.endDate | date}}</b>.</p>
+  <p></p>
+
+  <h3>Bewertungen unseres {{training?.name}}-Trainings:</h3>
+  <div class="bewertungs-card-container">
+    <div *ngFor="let bewertung of training?.bewertungen" class="bewertungs-card">
+      <p class="stars">
+        <mat-icon *ngIf="bewertung.stars>0">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>1">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>2">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>3">star</mat-icon>
+        <mat-icon *ngIf="bewertung.stars>4">star</mat-icon>
+      </p>
+      <p>{{bewertung.comment}}</p>
+      <p>von <b>{{bewertung.bewerter}}</b></p>
+    </div>
+  </div>
+</div>

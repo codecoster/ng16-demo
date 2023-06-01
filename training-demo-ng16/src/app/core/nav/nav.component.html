@@ -1,0 +1,18 @@
+<nav class="nav-list">
+  <a [routerLinkActiveOptions]="{exact: true}"
+     class="nav-list-el"
+     routerLink="/"
+     routerLinkActive="active">
+    Home
+  </a>
+  <a class="nav-list-el"
+     routerLink="/trainings"
+     routerLinkActive="active">
+    Trainings
+  </a>
+
+  <div *ngIf="userInfo() as user" class="user-info">
+    Eingeloggt als: <b>{{user.name}}</b> <br>
+    Bereits an {{user.finishedCourses}} Trainings teilgenommen
+  </div>
+</nav>

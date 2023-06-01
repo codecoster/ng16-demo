@@ -1,0 +1,7 @@
+<ng-container *ngIf="trainingWithBewertung?.() as training">
+  <h1 class="content-header">{{training?.name}}</h1>
+  <app-training-entry [training]="training"></app-training-entry>
+
+  <app-bewertung-input (emitBewertung)="sendFeedback(training?.id)" [bewertungForm]="bewertungForm">
+  </app-bewertung-input>
+</ng-container>

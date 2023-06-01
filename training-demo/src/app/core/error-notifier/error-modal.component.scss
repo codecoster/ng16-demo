@@ -1,0 +1,14 @@
+:host {
+  position: relative;
+  display: block;
+
+  button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+  }
+}
